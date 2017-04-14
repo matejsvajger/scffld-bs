@@ -1,0 +1,24 @@
+{
+  "name": "scfld-bs",
+  "version": "1.0.0",
+  "description": "Bootstrap Package for scffld",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scffld",
+    "template",
+    "build",
+    "system",
+    "bootstrap"
+  ],
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  },
+  "author": "Matej Svajger <hello@matejsvajger.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "scffld": "^1.2.7"
+  }
+}
