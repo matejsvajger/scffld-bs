@@ -1,0 +1,7 @@
+mixin header
+  +navbar-logo(site.data.demo.title, "navbar", "default", '/', '/images/logo.svg')
+    each item in site.data.demo.menu
+      +nav_item( item.link )=item.name
+    +nav_item_dropdown('#')(label='Dropdown')
+      each item in site.data.demo.menu
+        +nav_item( item.link )=item.name

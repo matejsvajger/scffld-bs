@@ -1,0 +1,83 @@
+/**
+ * Set a rem font size with pixel fallback
+ *
+ * Rem is similar to the em value, but instead of being relative
+ * to the parent element it’s relative to the font-size set in the <html>.
+ * It has all the benefits of em but you don’t get issues with e.g (compounding)
+ * since rem is only relative to the html element.
+ * https://snook.ca/archives/html_and_css/font-size-with-rem
+ *
+ * I suggest you use this to set font size everywhere! All fonts
+ * on your template will scale accoringly to the base font size
+ * defined on your html body.
+ *
+ * @example
+ *   h1 {
+ *     @include font-size(24px);
+ *   }
+ */
+
+@function calculateRem($size) {
+  $remSize: $size / $font-size-base;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+/**
+ * Create a font face rule. Embedded OpenType, WOFF2, WOFF, TrueType,
+ * and SVG files are automatically sourced.
+ *
+ * @example
+ *   @include font-face(Samplino, fonts/Samplino);
+ *
+ * @result
+ *   @font-face {
+ *      font-family: "Samplino";
+ *      src: url("fonts/Samplino.eot?") format("eot"),
+ *           url("fonts/Samplino.woff2") format("woff2"),
+ *           url("fonts/Samplino.woff") format("woff"),
+ *           url("fonts/Samplino.ttf") format("truetype"),
+ *           url("fonts/Samplino.svg#Samplino") format("svg");
+ *   }
+ */
+
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+
+    $extmods: (
+        eot: "?",
+        svg: "#" + str-replace($name, " ", "_")
+    );
+
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}

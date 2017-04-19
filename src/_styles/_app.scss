@@ -1,0 +1,25 @@
+.app {
+
+    .navbar { margin-bottom: 0px; }
+
+    a { outline: none; }
+
+    main { min-height: calc(100vh - 82px); }
+
+    .row-eq-height {
+        display: flex;
+        flex-wrap: wrap;
+
+        & > [class*='col-'] {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+
+
+/**
+ * Styles for example page. You can safely delete those;
+ */
+@import 'components/example';

@@ -1,0 +1,9 @@
+
+//- Default slick slider styles
+*[data-role="slick"] {
+    margin-bottom: 70px !important;
+
+    &:not(.slick-initialized) { display:none; }
+    .slick-dots { bottom: -35px; }
+    .slick-prev:before, .slick-next:before { color: black; }
+}
