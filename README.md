@@ -51,7 +51,7 @@ You're done! You can use one of many `scffld` gulp tasks to build your template 
 Check your system is [setup](https://github.com/matejsvajger/scffld#getting-started) to run `scffld`.
 
 
-- Install NodeJS >= 6.10.* from (https://nodejs.org/en/)[https://nodejs.org/en/]
+- Install NodeJS >= 6.10.* from [https://nodejs.org/en/](https://nodejs.org/en/)
 - Install Gulp: `npm install -g gulp`
 
 
@@ -246,7 +246,7 @@ When writing JavaScript for your template, classes are preffered and spliting yo
 
 There's a few modules packed in this skeleton that handle libraries and work out of the box, in a similar fashion as bootstrap components. All of them are triggered via html data-role attribute and you can use them without writing any JS.
 
--
+--
 
 #### Slick `[data-role="slick"]`
 
@@ -276,7 +276,7 @@ For example you want to slide some articles and have different number of slides 
   +article(...)
 ```
 
--
+--
 
 #### MagnificPopup `[data-role="magnific"]`
 
@@ -288,7 +288,8 @@ To trigger magnific popup on a link just add the data attribute to an anchor tag
 a(href="/img/bigimage.jpg" data-role="magnific")
 	img(src="/img/thumb.jpg")
 ```
--
+
+--
 
 #### jQuery.mmenu `[data-role="mmenu"]`
 
@@ -302,7 +303,6 @@ nav#mobile-menu(data-role="mmenu")
   ul
     li
       a(href="...") Home
-    ...
 ```
 
 ---

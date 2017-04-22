@@ -1,6 +1,6 @@
 {
   "name": "scfld-bs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bootstrap Package for scffld",
   "main": "index.js",
   "scripts": {
