@@ -27,13 +27,12 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-
 let App = new Application();
 
 
 /**
  * Initialize the application on document ready. All code that needs
- * to be executed when page is done, should be handles from within the
+ * to be executed when page is done, should be handled from within the
  * Application init method.
  */
 
