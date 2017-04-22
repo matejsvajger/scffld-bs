@@ -1,0 +1,44 @@
+/**
+ * Use this mixins to add media queries to your classes.
+ * bs-sm, bp-md, bp-lg follow the values from Bootstrap
+ * breakpoints and bp-xs is custom, that adds one more
+ * level on vertical mobile devices.
+ *
+ * @example
+ *   .myclass {
+ *     font-size: 16px;
+ *
+ *     @include bp-sm {
+ *      font-size: 14px;
+ *     }
+ *   }
+ *
+ */
+
+/* Small devices (phone, 480px and up) */
+@mixin bp-xs {
+  @media (min-width: $screen-xs-min) {
+    @content;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@mixin bp-sm {
+  @media (min-width: $screen-sm-min) {
+    @content;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@mixin bp-md {
+  @media (min-width: $screen-md-min) {
+    @content;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@mixin bp-lg {
+  @media (min-width: $screen-lg-min) {
+    @content;
+  }
+}

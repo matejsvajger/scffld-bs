@@ -1,0 +1,109 @@
+extends _layouts/app
+
+block content
+
+  .example
+
+    // Carousel
+    //-==================================================
+    +carousel("exampleCarousel", site.data.demo.slider)
+
+
+    // Slick
+    //-==================================================
+    .container
+      hr
+      .row
+        .col-md-12
+          .article-slider(data-role="slick" data-dots data-arrows data-show-lg="4" data-show-md="3" data-show-sm="2" data-show-xs="1").text-center
+            each image in site.data.demo.articles
+              .slide
+                img.img-circle(src=image, alt='Generic placeholder image', width='140', height='140')
+                h2 Heading
+                p
+                  | Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+                p
+                  a.btn.btn-default(href='#', role='button') View details »
+
+    // Modal
+    //-==================================================
+    .jumbotron.text-center
+      .container
+        h1 Modal stuff!
+        p.lead
+          | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.
+        p
+          button.btn.btn-lg.btn-success(data-toggle="modal", data-target="#exampleModal") Launch demo modal
+          +modal("Hello there!", "exampleModal")
+            p This is modal content
+
+
+    // Magnific-Popup
+    //-==================================================
+    .container.magnific
+      hr
+      .row-eq-height
+        .col-sm-7
+          .content
+            h2
+              | Magnific Popup Heading.
+              |
+              span.text-muted It'll blow your mind.
+            p.lead
+              | Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+        .col-sm-5
+          a(href="http://lorempixel.com/800/500/food?v=1" data-role="magnific" title="This popup is initialized via data-role='magnific' attribute")
+            img.img-responsive.img-circle.center-block(src='http://lorempixel.com/500/500/food?v=1', alt='Generic placeholder image')
+      hr
+      .row-eq-height
+        .col-sm-7.col-sm-push-5
+          .content
+            h2
+              | Oh yeah, it's that good.
+              |
+              span.text-muted See for yourself.
+            p.lead
+              | Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+        .col-sm-5.col-sm-pull-7
+          a(href="http://lorempixel.com/800/500/food?v=2" data-role="magnific" title="Hey! I'm a custom title!")
+            img.img-responsive.img-circle.center-block(src='http://lorempixel.com/500/500/food?v=2', alt='Generic placeholder image')
+
+    // Slick - default no options with Magnific combined
+    //-==================================================
+    .container
+      hr
+      .row
+        .col-md-12
+          p.lead.text-center
+            | Slick with magnificPopup
+          .slider(data-role="slick" data-dots)
+            each slide in site.data.demo.slider
+              .a(data-role="magnific" href=slide.image )
+                img.img-responsive(src=slide.image, alt='Generic placeholder image')
+
+    // Mobile-Menu
+    //-==================================================
+    .container
+      .jumbotron
+        h1 HEY!
+        p
+          strong What about Mobile menu!?
+        p Right! Just add *[data-role="mmenu"] attribute to an &lt;nav&gt; element with unordered list and an anchor tag pointing to it:
+        a.btn.btn-info(href='#mobile-menu') Open me!
+        nav#mobile-menu(data-role="mmenu")
+          ul
+            each item in site.data.demo.menu
+              li
+                a(href=item.link)=item.name
+            li
+              a(href="#") Dropdown
+              ul
+                each item in site.data.demo.menu
+                  li
+                    a(href=item.link)=item.name
+
+
+//- Overwrite the default footer for example page
+block footer
+  footer.example
+    +footer()

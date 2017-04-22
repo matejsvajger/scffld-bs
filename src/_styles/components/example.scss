@@ -1,0 +1,47 @@
+.example {
+
+    @include font-size(21px);
+    font-weight: 300;
+
+    .jumbotron { margin-bottom: 0; }
+
+    .magnific {
+        .content {
+            @include align(true, true);
+            h2 {
+                font-weight: normal;
+                @include font-size(50px);
+            }
+        }
+    }
+
+    hr { margin: 40px 0; }
+
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        width: 100%;
+    }
+
+    .article-slider {
+        .slick-slide {
+            padding: 0 15px;
+            img { display: inline; }
+        }
+    }
+
+}
+
+footer.example {
+    background: #eeeeee;
+    line-height: 30px;
+    margin-top: 40px;
+    padding: 20px 0;
+
+    p {
+        margin: 0;
+    }
+
+    small {
+        @include font-size(21px);
+    }
+}

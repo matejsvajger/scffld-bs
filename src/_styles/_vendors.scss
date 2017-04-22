@@ -1,0 +1,38 @@
+/**
+ * Bootstrap 3 with plugins
+ */
+@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import 'bootstrap-datepicker/dist/css/bootstrap-datepicker';
+@import 'bootstrap-select/sass/bootstrap-select.scss';
+
+/**
+ * Slick-slider styles
+ */
+@import 'slick-carousel/slick/slick.scss';
+@import 'slick-carousel/slick/slick-theme.scss';
+
+/**
+ * jQuery.mmenu styles
+ */
+@import 'jquery.mmenu/dist/css/jquery.mmenu.all';
+
+/**
+ * cookie consent modal styles
+ * https://cookieconsent.insites.com/
+ */
+@import 'cookieconsent/build/cookieconsent.min';
+
+/**
+ * Font-Awesome 4 styles
+ */
+@import 'font-awesome/scss/font-awesome';
+
+/**
+ * Magnific Popup
+ */
+@import 'magnific-popup/src/css/main';
+
+/**
+ * Sweetalert modal
+ */
+@import 'sweetalert/dist/sweetalert';

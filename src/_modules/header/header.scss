@@ -1,0 +1,13 @@
+header {
+    .navbar-brand {
+        padding: 10px 15px;
+        img { max-height: 30px; }
+    }
+}
+
+/**
+ * Fix for mmenu and bs-modal backdrop clashing
+ */
+.mm-slideout { z-index:auto; }
+
+
