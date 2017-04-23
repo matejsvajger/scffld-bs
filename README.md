@@ -1,4 +1,4 @@
-# Scffld /ˈskafəʊld'/ Bootstrap Package
+# Scffld Bootstrap Package
 > A powerful starting point for developing html5 templates on BootStrap, build on top of [scffld](https://github.com/matejsvajger/scffld) - a tool that provides the environment for compiling superset of languages used in the template into ones that browser understands.
 
 ## Features
