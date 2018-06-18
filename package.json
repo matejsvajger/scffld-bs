@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "plop install"
+    "install": "plop install",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "scffld",
@@ -35,8 +37,10 @@
     "promise": "^7.1.1",
     "slick-carousel": "^1.6.0",
     "sweetalert": "^1.1.3",
-    "scffld": "^1.3.1"
+    "scffld": "^1.3.1",
+    "snyk": "^1.83.0"
   },
   "author": "Matej Svajger <hello@matejsvajger.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
