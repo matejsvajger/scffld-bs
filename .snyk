@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:lodash:20180130':
+    - scffld > gulp-parker > parker > lodash:
+        patched: '2024-06-21T17:32:59.043Z'
+        id: 'npm:lodash:20180130'
+        path: scffld > gulp-parker > parker > lodash
