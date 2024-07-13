@@ -19,7 +19,7 @@
     "type": "git"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^5.0.0",
     "bootstrap-datepicker": "^1.6.4",
     "bootstrap-sass": "^3.3.7",
     "bootstrap-select": "^1.12.2",
